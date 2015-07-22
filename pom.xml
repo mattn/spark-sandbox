@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.mattn</groupId>
 	<artifactId>MyWebApp</artifactId>
-	<version>1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<build>
 		<defaultGoal>package</defaultGoal>
@@ -44,6 +44,16 @@
 					</webApp>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<server>tomcat7</server>
+					<url>http://192.168.124.103:8080/manager/text</url>
+					<path>/MyWebApp</path>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -77,6 +87,11 @@
 			<groupId>org.seasar.doma</groupId>
 			<artifactId>doma</artifactId>
 			<version>2.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.187</version>
 		</dependency>
 	</dependencies>
 	<properties>
