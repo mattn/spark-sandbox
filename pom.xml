@@ -33,9 +33,9 @@
 				</configuration>  
 			</plugin>  
 			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>8.1.16.v20140903</version>
+				<version>9.3.0.M2</version>
 				<configuration>
 					<reload>automatic</reload>
 					<scanIntervalSeconds>1</scanIntervalSeconds>
